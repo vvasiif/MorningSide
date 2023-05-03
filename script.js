@@ -47,3 +47,20 @@ function switchDivs() {
 }
 
 switchDivs();
+
+function toggleDropdown() {
+    var dropdownMenu = document.querySelector(".dropdown-menu");
+    var dropImage = document.querySelector(".nav-dropdown img");
+  
+    if (dropdownMenu.style.display === "block") {
+      dropdownMenu.style.display = "none";
+      dropImage.style.transform = "rotate(0deg)";
+      dropImage.style.filter = "none";
+    } else {
+      dropdownMenu.style.display = "block";
+      dropImage.style.transform = "rotate(-180deg)";
+      dropImage.style.filter = "hue-rotate(-90deg)";
+      dropImage.style.transition = "transform 0.3s ease-in-out";
+    }
+  }
+  
